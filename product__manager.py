@@ -1,6 +1,5 @@
 from product import Product
 
-
 class ProductManager(Product):
     def __init__(self, name, price, quantity):
         super().__init__(name, price, quantity)
@@ -15,5 +14,13 @@ class ProductManager(Product):
         return self.total_price
         
     def product_info_list(self):
-        print(f"Product list: {self.list_products}")
+        print("Product list:")
+        for product in self.list_products:
+            print(f"{product.name}")
         
+    def remove_product(self, product):
+        for p in self.list_products:
+            if p.name == product:
+                self.list_products.remove(p)
+                self.total_price -= p.price
+                break
