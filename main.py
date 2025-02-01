@@ -14,16 +14,18 @@ def main():
     pm.add_product(pm4)
 
     pm.product_info_list()
-    
+
     pm.update_total_price(pm1.price)
     pm.update_total_price(pm2.price)
     pm.update_total_price(pm3.price)
     pm.update_total_price(pm4.price)
     print(f"Total product price from the list: {pm.total_price}")
     print()
+    
     pm.remove_product("Jakna")
     pm.product_info_list()
     print(f"Total product price from the list: {pm.total_price}")
+
     
     
     
@@ -32,16 +34,3 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-"""pm.add_product(p.name)
-print(pm.add_price(300))
-pm.product_info_list()
-pm.update_total_price(300)
-pm.update_total_price(100)
-pm.update_total_price(200)
-print(pm.total_price)"""
